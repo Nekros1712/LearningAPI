@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning API</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body style="background-color: rgb(8, 26, 88); overflow-x: hidden; word-wrap: break-word;">
+
+    <div class="text-center" style="padding-top: 50px; color: aqua;">
+        <h1 class="display-6">Hello World! Get here the funniest jokes..</h1>
+        <p class="lead">Get started by clicking Random button</p>
+    </div>
+
+    <div id="jokebox" class="text-center text-light" style="padding-top: 100px; padding-right: 15%; padding-left: 15%;">
+    </div>
+
+    <div class="text-center" style="padding-top: 100px;">
+        <button onclick="getRandom()" type="button" class="btn btn-primary">Random</button>
+        <button onclick="getCategList()" type="button" class="btn btn-primary">Categories</button>
+        <div style="padding-top: 20px; padding-bottom: 50px;">
+            <input type="text" id="searchcategory"
+                style="background-color: gray; color: floralwhite; width: 200px; cursor: pointer;">
+            <button onclick="getSearchedByCategory()" class="btn btn-primary" type="button">Search by Category</button>
+            <br><br>
+            <input type="text" id="searchtext"
+                style="background-color: gray; color: floralwhite; width: 200px; cursor: pointer;">
+            <button onclick="getSearchedByKeyWord()" id="kw" class="btn btn-primary" type="button">Search by KeyWord</button>
+        </div>
+    </div>
+</body>
+</html>

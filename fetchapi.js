@@ -18,7 +18,7 @@ async function getCategList() {
 
 async function getSearchedByCategory() {
   let category = document.getElementById('searchcategory').value
-  let url = `https://api.chucknorris.io/jokes/random?category=${category}`;
+  let url = 'https://api.chucknorris.io/jokes/random?category=' + category;
   let response = await fetch(url);
   let res = await response.json();
   document.getElementById('jokebox').innerHTML = '<h2><b>' + res.value + '</b></h2>';
@@ -26,7 +26,7 @@ async function getSearchedByCategory() {
 
 async function getSearchedByKeyWord() {
   let keyword = document.getElementById('searchtext').value
-  let url = `https://api.chucknorris.io/jokes/search?query=${keyword}`;
+  let url = 'https://api.chucknorris.io/jokes/search?query=' + keyword;
   let response = await fetch(url);
   let res = await response.json();
   document.getElementById('jokebox').innerHTML = '<h2><b>' + res.result[0].value + '</b></h2>';

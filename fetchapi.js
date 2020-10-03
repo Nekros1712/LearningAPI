@@ -24,12 +24,14 @@ async function getSearchedByCategory() {
   document.getElementById('jokebox').innerHTML = '<h2><b>' + res.value + '</b></h2>';
 }
 
+let i = 0;
 async function getSearchedByKeyWord() {
-  let keyword = document.getElementById('searchtext').value
-  let url = 'https://api.chucknorris.io/jokes/search?query=' + keyword;
-  let response = await fetch(url);
-  let res = await response.json();
-  document.getElementById('jokebox').innerHTML = '<h2><b>' + res.result[0].value + '</b></h2>';
+    var searchText = document.getElementById('searchtext').value;
+    var url = 'https://api.chucknorris.io/jokes/search?query=' + searchText;
+    let response = await fetch(url);
+    let res = await response.json();
+    f(i++);
+    function f(i) {
+        document.getElementById('jokebox').innerHTML = '<h2><b>' + res.result[i].value + '</b></h2>';
+    }
 }
-
-
